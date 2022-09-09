@@ -6,12 +6,10 @@ module Boolean where
 
     --Logic or function lor
     lor :: Boolean -> Boolean -> Boolean
-    lor T _ = T
-    lor _ T = T
-    lor _ _ = F
+    lor F F = F
+    lor _ _ = T
 
     --Logic and function land
     land :: Boolean -> Boolean -> Boolean
-    land F _ = F
-    land _ F = F
-    land _ _ = T
+    land T T = T
+    land _ _ = F
